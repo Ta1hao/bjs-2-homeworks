@@ -88,3 +88,25 @@ class AlarmClock {
         this.alarmCollection = []; 
     }
 }
+
+let test = new AlarmClock();
+
+test.addClock(`10:55`, () => console.log(`alarm1`), 22);
+test.addClock(`23:30`, () => 2, 1);
+test.addClock(`23:30`, () => false, 2);
+console.log(test)
+console.log(test.removeClock(2));
+console.log(test.removeClock(5));
+console.log(test.getCurrentFormattedTime());
+console.log(test);
+test.addClock(`19:19`, () => alert(`lfdll`), 15);
+test.start();
+test.start();
+test.stop();
+console.log(test);
+setTimeout(() => console.log(test.timerId), 3000)
+test.printAlarms()
+
+
+
+console.log(test.getCurrentFormattedTime());
